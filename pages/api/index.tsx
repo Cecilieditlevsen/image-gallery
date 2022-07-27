@@ -1,5 +1,5 @@
 import React from 'react'
-import { BlurImage } from '../components/blurImage'
+import { BlurImage } from '../../src/components/blurImage'
 import { z } from 'zod'
 import { createClient } from '@supabase/supabase-js'
 
