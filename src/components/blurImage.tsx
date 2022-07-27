@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { Image as TImage } from '../../pages/api'
+import { Image as TImage } from '../pages'
 
 function cn(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
