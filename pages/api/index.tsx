@@ -19,6 +19,8 @@ export type Image = {
   username: string
 }
 
+//comment
+
 export async function getStaticProps() {
   const supabaseAdmin = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL || '',
