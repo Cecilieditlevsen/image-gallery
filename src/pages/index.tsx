@@ -1,5 +1,5 @@
 import React from 'react'
-import { BlurImage } from '../components/blurImage'
+import { BlurImage } from '../components/elements/blurImage'
 import { z } from 'zod'
 import { createClient } from '@supabase/supabase-js'
 
@@ -21,13 +21,14 @@ export type Image = {
 
 //comment
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const supabaseAdmin = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL || '',
     process.env.SUPABASE_SERVICE_ROLE_KEY || ''
   )
 
   const { data } = await supabaseAdmin.from('images').select('*').order('id')
+
   return {
     props: {
       images: data
